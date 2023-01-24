@@ -7,7 +7,7 @@ const appContainer: HTMLElement = document.getElementById('app');
 document.addEventListener('DOMContentLoaded', () => {
   const appCanvas = document.createElement('canvas') as HTMLCanvasElement;
   appContainer.appendChild(appCanvas); 
-  window.addEventListener('touch', () => {
+  window.addEventListener('touchstart', () => {
     appContainer.requestFullscreen();
   });
 });
