@@ -2,5 +2,12 @@
 import './style.css';
 
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+const appContainer: HTMLElement = document.getElementById('app');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const appCanvas = document.createElement('canvas') as HTMLCanvasElement;
+  appContainer.appendChild(appCanvas); 
+  window.addEventListener('touch', () => {
+    appContainer.requestFullscreen();
+  });
+});
